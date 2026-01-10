@@ -7,7 +7,7 @@
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	background: url(./assets/img/bg_pattern.jpg) 0 0 / 1280px;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -18,7 +18,8 @@
 body {
 	margin: 0;
 	display: flex;
-	place-items: center;
+	justify-content: center;
 	min-width: 320px;
 	min-height: 100vh;
+	height: 100%;
 }
