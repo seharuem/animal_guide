@@ -1,7 +1,16 @@
 #root {
-  width: 100%;
-  max-width: 1280px;
-  height: 100dvh;
-  text-align: center;
-  background-color: rgba(255, 255, 230, 0.5);
+	width: 100%;
+	max-width: 1280px;
+	height: 100dvh;
+	text-align: center;
+	background-color: rgba(255, 255, 230, 0.5);
+	overflow: hidden;
+	font-family: 'Nexon Lv2 Gothic', sans-serif;
+}
+
+:root {
+	--header: #f8f8ef;
+	--shadowB: 0 4px 4px rgba(0, 0, 0, 0.25);
+	--text: #827157;
+	--p: #19c8b9;
 }

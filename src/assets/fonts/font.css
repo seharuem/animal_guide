@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'Nexon Lv2 Gothic';
+	font-weight: 300;
+	src: url('./NEXON\ Lv2\ Gothic\ OTF\ Light.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Nexon Lv2 Gothic';
+	font-weight: 500;
+	src: url('./NEXON\ Lv2\ Gothic\ OTF.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Nexon Lv2 Gothic';
+	font-weight: 700;
+	src: url('./NEXON\ Lv2\ Gothic\ OTF\ Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Nexon Lv2 Gothic';
+	font-weight: 900;
+	src: url('./NEXON\ Lv2\ Gothic\ OTF\ Bold.otf') format('opentype');
+}
