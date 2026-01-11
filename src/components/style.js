@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const move = keyframes`
+20% { translate: 0 -5px; }
+80% { translate: 0 5px; }
+`;
 
 export const Url = styled(Link).attrs({
 	className: 'font-extrabold text-lg'
@@ -17,7 +22,7 @@ export const Url = styled(Link).attrs({
 		background-color: var(--p);
 		scale: 0 1;
 		transition: scale 0.2s ease-out;
-    transform-origin: left;
+		transform-origin: left;
 	}
 	&.page:hover::after {
 		scale: 1 1;
@@ -33,4 +38,11 @@ export const Url = styled(Link).attrs({
 		aspect-ratio: 1;
 		background: url('./login.svg') center / contain no-repeat;
 	}
+	&.login:hover::after {
+		animation: ${move} 0.7s ease-out infinite;
+	}
 `;
+
+export const Box = styled.div.attrs({
+	className: 'rounded-3xl p-5 border-solid border-3 flex flex-col gap-4'
+})``;
