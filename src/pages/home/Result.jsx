@@ -20,7 +20,7 @@ export default function Result() {
 					<span className={rank === '1등' ? 'text-xl' : 'text-lg'}>{rank}</span>
 					<img className='h-10' src={img} alt='' />
 					<span className={rank === '1등' ? 'text-3xl' : 'text-2xl'}>{name}</span>
-					<span className='ml-auto self-end text-lg'>{votes}표</span>
+					<span className='ml-auto self-end text-lg font-bold'>{votes}표</span>
 				</Rank>
 			))}
 		</Box>

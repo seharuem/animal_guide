@@ -1,5 +1,6 @@
 import Result from './Result';
 import BirthDay from './BirthDay';
+import Links from './Links';
 
 export default function Home() {
 	return (
@@ -7,6 +8,7 @@ export default function Home() {
 			<div className='p-10 flex gap-10'>
 				<Result />
 				<BirthDay />
+				<Links />
 			</div>
 		</div>
 	);

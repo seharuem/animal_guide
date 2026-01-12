@@ -17,7 +17,7 @@ export default function BirthDay() {
 					<li key={index} className='h-15 flex items-center gap-4 pr-2'>
 						<img className='h-14 object-contain' src={item.img} alt='' />
 						<span className='text-2xl font-extrabold'>{item.name}</span>
-						<span className='text-lg font-extrabold ml-auto'>{item.date}</span>
+						<span className='text-lg font-bold ml-auto'>{item.date}</span>
 					</li>
 				))}
 			</ul>
