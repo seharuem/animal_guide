@@ -1,18 +1,36 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
+
+const base = '/animal_guide';
 
 const move = keyframes`
 20% { translate: 0 -5px; }
 80% { translate: 0 5px; }
 `;
 
-export const Url = styled(Link).attrs({
+export const Url = styled(NavLink).attrs({
 	className: 'font-extrabold text-lg'
 })`
-	&.page {
-		position: relative;
+	&.login {
+		display: flex;
+		gap: 4px;
+		align-items: center;
 	}
-	&.page::after {
+	&.login::after {
+		content: '';
+		width: 22px;
+		aspect-ratio: 1;
+		background: url('${base}/login.svg') center / contain no-repeat;
+	}
+	&.login:hover::after {
+		animation: ${move} 0.7s ease-out infinite;
+	}
+`;
+
+export const Page = styled(Url).attrs({
+	className: 'relative'
+})`
+	&::after {
 		content: '';
 		position: absolute;
 		top: 100%;
@@ -24,22 +42,11 @@ export const Url = styled(Link).attrs({
 		transition: scale 0.2s ease-out;
 		transform-origin: left;
 	}
-	&.page:hover::after {
+	&:hover::after {
 		scale: 1 1;
 	}
-	&.login {
-		display: flex;
-		gap: 4px;
-		align-items: center;
-	}
-	&.login::after {
-		content: '';
-		width: 22px;
-		aspect-ratio: 1;
-		background: url('./login.svg') center / contain no-repeat;
-	}
-	&.login:hover::after {
-		animation: ${move} 0.7s ease-out infinite;
+	&.active::after {
+		scale: 1 1;
 	}
 `;
 

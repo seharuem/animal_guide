@@ -1,6 +1,6 @@
 import Logo from '../assets/img/logo.png';
-import { Link } from 'react-router-dom';
-import { Url } from './style';
+import { NavLink } from 'react-router-dom';
+import { Url, Page } from './style';
 
 const links = [
 	{ to: '/villager', label: '주민 명부' },
@@ -13,13 +13,13 @@ export default function Header() {
 		<header className='fixed inset-x-0 h-20 bg-(image:--header) shadow-(--shadowB) flex justify-center'>
 			<div className='w-7xl h-full px-5 flex justify-between'>
 				<nav className='w-max flex gap-5 items-center'>
-					<Link to='/animal_guide'>
+					<NavLink to='/'>
 						<img className='h-20' src={Logo} alt='' />
-					</Link>
+					</NavLink>
 					{links.map((link, index) => (
-						<Url key={index} className='page' to={link.to}>
+						<Page key={index} className={({ isActive }) => (isActive ? 'active' : '')} to={link.to}>
 							{link.label}
-						</Url>
+						</Page>
 					))}
 				</nav>
 				<nav className='w-max flex gap-5 items-center'>

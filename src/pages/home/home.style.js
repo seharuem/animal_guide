@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const base = '/animal_guide';
+
 export const Title3 = styled.h3.attrs({
 	className: 'font-extrabold text-3xl flex items-center gap-2 border-b-2 border-solid pb-2'
 })`
@@ -11,10 +13,10 @@ export const Title3 = styled.h3.attrs({
 		background: center / contain no-repeat;
 	}
 	&.star::before {
-		background-image: url('./star.svg');
+		background-image: url('${base}/star.svg');
 	}
 	&.birth::before {
-		background-image: url('./cake.svg');
+		background-image: url('${base}/cake.svg');
 	}
 `;
 
@@ -45,12 +47,12 @@ export const Menu = styled(Link).attrs({
 		background: center / contain no-repeat;
 	}
 	&:nth-child(1)::before {
-		background-image: url('./link1.svg');
+		background-image: url('${base}/link1.svg');
 	}
 	&:nth-child(2)::before {
-		background-image: url('./link2.svg');
+		background-image: url('${base}/link2.svg');
 	}
 	&:nth-child(3)::before {
-		background-image: url('./link3.svg');
+		background-image: url('${base}/link3.svg');
 	}
 `;
