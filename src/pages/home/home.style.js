@@ -30,12 +30,13 @@ export const Menu = styled(Link).attrs({
 	className:
 		'font-extrabold text-xl flex justify-center gap-2 w-40 p-4 bg-(image:--glass) rounded-2xl border-solid border-1 border-white/10 shadow-(--shadow)'
 })`
+	text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 	transition: color 0.1s ease-out;
 	&:nth-child(1):hover {
 		color: #5fa0d7;
 	}
 	&:nth-child(2):hover {
-		color: #11a983;
+		color: #70b98b;
 	}
 	&:nth-child(3):hover {
 		color: #e99090;
@@ -44,15 +45,18 @@ export const Menu = styled(Link).attrs({
 		content: '';
 		width: 16px;
 		aspect-ratio: 1;
-		background: center / contain no-repeat;
+		mask: center / contain no-repeat;
 	}
 	&:nth-child(1)::before {
-		background-image: url('${base}/link1.svg');
+		background-color: #5fa0d7;
+		mask-image: url('${base}/link1.svg');
 	}
 	&:nth-child(2)::before {
-		background-image: url('${base}/link2.svg');
+		background-color: #70b98b;
+		mask-image: url('${base}/link2.svg');
 	}
 	&:nth-child(3)::before {
-		background-image: url('${base}/link3.svg');
+		background-color: #e99090;
+		mask-image: url('${base}/link3.svg');
 	}
 `;
