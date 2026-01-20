@@ -8,9 +8,9 @@ export default function Board() {
 	const [ activeTab, setActiveTab ] = useState('notice');
 	const { data, loading } = usePosts();
 
-	return (
+	return ( 
 		<div className='h-full pt-20'>
-			<Wrap>
+			<Wrap className='gap-7'>
 				<TabWrap>
 					<TabBtn className={activeTab === 'notice' ? 'active' : ''} onClick={() => setActiveTab('notice')}>
 						공지사항

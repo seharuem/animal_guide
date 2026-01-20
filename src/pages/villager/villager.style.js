@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Wrap } from '../../components/style';
 
 export const CardWrap = styled.div.attrs({
 	className: 'w-full grid gap-2'

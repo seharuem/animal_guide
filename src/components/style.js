@@ -9,7 +9,7 @@ const move = keyframes`
 `;
 
 export const Url = styled(NavLink).attrs({
-	className: 'font-extrabold text-lg'
+	className: 'font-bold text-lg'
 })`
 	&.login {
 		display: flex;
@@ -45,6 +45,9 @@ export const Page = styled(Url).attrs({
 	&:hover::after {
 		scale: 1 1;
 	}
+	&.active {
+		font-weight: 900;
+	}
 	&.active::after {
 		scale: 1 1;
 	}
@@ -55,5 +58,5 @@ export const Box = styled.div.attrs({
 })``;
 
 export const Wrap = styled.div.attrs({
-	className: 'h-full p-10 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5'
+	className: 'h-full p-10 pt-6 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5'
 })``;

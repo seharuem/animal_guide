@@ -1,4 +1,5 @@
 import mini from '../assets/img/tom_icon.png';
+import img from '../assets/img/Tom_Nook_NH.png';
 
 export const card = [
 	{ name: '너굴', img: mini },
@@ -13,4 +14,52 @@ export const card = [
 	{ name: '너굴', img: mini },
 	{ name: '너굴', img: mini },
 	{ name: '너굴', img: mini }
+];
+
+export const card2 = [
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img },
+	{ name: '너굴', img: img }
 ];

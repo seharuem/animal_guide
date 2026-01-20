@@ -82,7 +82,7 @@ export default function DataTable({ data }) {
 				</tbody>
 			</table>
 
-			<div className='mt-4 flex items-center justify-center space-x-2'>
+			<div className='mt-6 flex items-center justify-center space-x-2'>
 				<PageBtn onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>
 					이전
 				</PageBtn>
