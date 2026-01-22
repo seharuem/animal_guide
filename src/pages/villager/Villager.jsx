@@ -1,15 +1,15 @@
 import { Wrap } from '../../components/style';
 import { CardWrap, Mini } from './villager.style';
-import { card } from '../../temp-data/data';
+import { char } from '../../temp-data/data';
 
 export default function Villager() {
 	return (
 		<div className='h-full pt-20'>
 			<Wrap>
 				<CardWrap>
-					{card.map((v, i) => (
+					{char.map((v, i) => (
 						<Mini key={i}>
-							<img src={v.img} alt='' />
+							<img src={v.mini} alt='' />
 							{v.name}
 						</Mini>
 					))}
