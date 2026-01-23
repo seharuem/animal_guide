@@ -4,35 +4,45 @@ import { CardWrap } from '../villager/villager.style';
 const base = '/animal_guide';
 
 export const SelectWrap = styled(CardWrap).attrs({
-	className: 'bg-(image:--glass) shadow-(--shadow) rounded-2xl p-8 overflow-scroll gap-8 flex-1'
-})``;
+	className: 'rounded-2xl p-4 pr-0 overflow-y-scroll gap-2 flex-1 bg-(--p) overflow-hidden'
+})`
+	&::-webkit-scrollbar {
+		width: 20px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 12px;
+		border: 8px solid transparent;
+		background-clip: padding-box;
+	}
+`;
 
 export const SelectBox = styled.label.attrs({
 	className:
-		'py-4 px-7 w-full flex flex-col gap-3 bg-(image:--glass2) shadow-(--shadow) rounded-xl relative cursor-pointer'
+		'pt-4 pb-2 px-7 w-full flex flex-col gap-3 bg-(image:--glass2) shadow-(--shadow) rounded-xl relative cursor-pointer overflow-hidden'
 })`
-	transition: background-color 0.1s ease-out;
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.3);
+	transition: background-color 0.2s ease-out;
+	&:has(:disabled) {
+		cursor: default;
 	}
-	input {
-		appearance: none;
-		width: 2rem;
-		aspect-ratio: 1;
-		background: var(--p) center / 60% no-repeat;
-		border-radius: 50%;
-		position: absolute;
-		top: 0;
-		right: 0;
-		translate: 50% -50%;
-		transition: inherit;
+	&:has(:checked) {
+		background-color: yellowgreen;
 	}
-	input:hover {
-		background-color: #42a767;
+	&:hover .txt {
+		opacity: 1;
 	}
-	input:checked {
-		background-image: url(${base}/check.svg);
+	&:has(:disabled) .txt {
+		background-color: slategray;
 	}
+`;
+
+export const Txt = styled.div.attrs({
+	className:
+		'txt bg-(image:--glass) shadow-(--shadow) absolute inset-0 top-30 flex items-center justify-center font-extrabold text-xl opacity-0 text-white'
+})`
+	background-color: yellowgreen;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+	transition: opacity 0.1s ease-out;
 `;
 
 export const CheckBox = styled.div.attrs({
