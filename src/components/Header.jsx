@@ -23,7 +23,7 @@ export default function Header() {
 					))}
 				</nav>
 				<nav className='w-max flex gap-5 items-center'>
-					<Url className='login' to='/'>
+					<Url className='login' to='/login'>
 						로그인
 					</Url>
 					<Url to='/'>회원가입</Url>

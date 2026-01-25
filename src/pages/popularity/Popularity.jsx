@@ -19,29 +19,32 @@ export default function Popularity() {
 		<div className='h-full pt-20'>
 			<Wrap className='relative'>
 				<h2 className='font-bold text-2xl'>5월의 인기투표</h2>
-				<SelectWrap>
-					{char.map((v, i) => {
-						const isChecked = checkId.includes(i);
-						const isFull = checkId.length === MAX;
-						const text = isChecked ? '선택해제' : isFull ? '선택 불가' : '선택';
+				<div className='flex-1 min-h-0 bg-(--p) rounded-2xl relative overflow-hidden'>
+					<SelectWrap>
+						{char.map((v, i) => {
+							const isChecked = checkId.includes(i);
+							const isFull = checkId.length === MAX;
+							const text = isChecked ? '선택해제' : isFull ? '선택 불가' : '선택';
 
-						return (
-							<SelectBox key={i}>
-								<img src={v.img} alt='' className='w-full object-contain' />
-								<div className='font-extrabold'>{v.name}</div>
-								<input
-									type='checkbox'
-									name='check'
-									className='hidden'
-									checked={checkId.includes(i)}
-									onChange={(e) => check(i, e.target.checked)}
-									disabled={!isChecked && isFull}
-								/>
-								<Txt>{text}</Txt>
-							</SelectBox>
-						);
-					})}
-				</SelectWrap>
+							return (
+								<SelectBox key={i}>
+									<img src={v.img} alt='' className='w-full object-contain' />
+									<div className='font-extrabold'>{v.name}</div>
+									<input
+										type='checkbox'
+										name='check'
+										className='hidden'
+										checked={checkId.includes(i)}
+										onChange={(e) => check(i, e.target.checked)}
+										disabled={!isChecked && isFull}
+									/>
+									<Txt>{text}</Txt>
+								</SelectBox>
+							);
+						})}
+						<div className='absolute inset-0 bg-linear-[180deg,transparent_90%,rgba(0,0,0,0.2)_100%] pointer-events-none' />
+					</SelectWrap>
+				</div>
 				<div className='h-35 flex gap-5 pt-5'>
 					{checkId.map((i) => (
 						<CheckBox key={i}>

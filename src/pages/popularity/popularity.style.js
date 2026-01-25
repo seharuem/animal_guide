@@ -4,15 +4,17 @@ import { CardWrap } from '../villager/villager.style';
 const base = '/animal_guide';
 
 export const SelectWrap = styled(CardWrap).attrs({
-	className: 'rounded-2xl p-4 pr-0 overflow-y-scroll gap-2 flex-1 bg-(--p) overflow-hidden'
+	className: 'h-full p-4 pr-0 overflow-y-scroll gap-2'
 })`
 	&::-webkit-scrollbar {
-		width: 20px;
+		width: 1.4rem;
+		background-color: transparent;
+		border-radius: 20px;
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: rgba(255, 255, 255, 0.8);
-		border-radius: 12px;
-		border: 8px solid transparent;
+		border-radius: 2rem;
+		border: 0.6rem solid transparent;
 		background-clip: padding-box;
 	}
 `;
