@@ -75,5 +75,5 @@ export const Box = styled.div.attrs({
 })``;
 
 export const Wrap = styled.div.attrs({
-	className: 'max-w-7xl w-full min-h-0 flex-1 self-center p-10 max-sm:p-4 pt-6 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5'
+	className: 'max-w-7xl w-full min-h-0 flex-1 self-center p-10 max-sm:p-4 pt-6 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5 overflow-hidden'
 })``;
