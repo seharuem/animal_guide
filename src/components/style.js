@@ -8,8 +8,17 @@ const move = keyframes`
 80% { translate: 0 5px; }
 `;
 
+export const Menu = styled.button.attrs({
+	type: 'button',
+	className: 'size-10 absolute left-5 z-30 rounded-full shadow-(--shadow) hidden max-sm:block'
+})`
+	background:
+		url('${base}/menu.svg') center / 70% no-repeat,
+		var(--glass);
+`;
+
 export const Url = styled(NavLink).attrs({
-	className: 'font-bold text-lg'
+	className: 'font-bold text-lg max-sm:hidden'
 })`
 	&.login {
 		display: flex;
@@ -27,6 +36,11 @@ export const Url = styled(NavLink).attrs({
 	}
 	&:hover:not(.page) {
 		font-weight: 900;
+	}
+	@media (max-width: 40rem) {
+		&.login {
+			display: none;
+		}
 	}
 `;
 
@@ -61,5 +75,5 @@ export const Box = styled.div.attrs({
 })``;
 
 export const Wrap = styled.div.attrs({
-	className: 'h-full p-10 pt-6 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5'
+	className: 'max-w-7xl w-full min-h-0 flex-1 self-center p-10 max-sm:p-4 pt-6 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5'
 })``;

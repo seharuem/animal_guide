@@ -1,25 +1,35 @@
-import {
-	createColumnHelper,
-	flexRender,
-	getCoreRowModel,
-	getPaginationRowModel,
-	useReactTable
-} from '@tanstack/react-table';
+import { createColumnHelper, getCoreRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
 import { PageBtn } from './board.style';
+import Mobile from './Mobile';
+import DeskTop from './Desktop';
 
 const columnHelper = createColumnHelper();
 
 const columns = [
-	columnHelper.accessor('id', { header: '번호', size: 5, cell: (info) => info.getValue() }),
-	columnHelper.accessor('title', {
-		header: '제목',
-		size: 400,
-		headerStyle: { textAlign: 'left' },
-		cellStyle: { textAlign: 'left' },
+	columnHelper.accessor('id', {
+		header: '번호',
+		headerStyle: { width: '3rem' },
+		cellStyle: { width: '3rem' },
 		cell: (info) => info.getValue()
 	}),
-	columnHelper.accessor('writer', { header: '작성자', size: 5, cell: (info) => info.getValue() }),
-	columnHelper.accessor('createdAt', { header: '작성일', size: 5, cell: (info) => info.getValue() })
+	columnHelper.accessor('title', {
+		header: '제목',
+		headerStyle: { textAlign: 'left', flex: 1 },
+		cellStyle: { textAlign: 'left', flex: 1 },
+		cell: (info) => info.getValue()
+	}),
+	columnHelper.accessor('writer', {
+		header: '작성자',
+		headerStyle: { width: '3rem' },
+		cellStyle: { width: '3rem' },
+		cell: (info) => info.getValue()
+	}),
+	columnHelper.accessor('createdAt', {
+		header: '작성일',
+		headerStyle: { width: '6rem' },
+		cellStyle: { width: '6rem' },
+		cell: (info) => info.getValue()
+	})
 ];
 
 export default function DataTable({ data }) {
@@ -31,56 +41,10 @@ export default function DataTable({ data }) {
 		initialState: { pagination: { pageSize: 20 } }
 	});
 
-	const currentRows = table.getRowModel().rows;
-	const paddedRows = currentRows.concat(Array(Math.max(0, 20 - currentRows.length)).fill(null));
-
 	return (
-		<div>
-			<table className='w-full border-collapse'>
-				<thead>
-					{table.getHeaderGroups().map((headerGroup) => (
-						<tr key={headerGroup.id}>
-							{headerGroup.headers.map((header) => (
-								<th
-									key={header.id}
-									style={{ width: header.getSize(), ...header.column.columnDef.headerStyle }}
-									className='border-y-2 border-(--p) p-2 text-xs'
-								>
-									{flexRender(header.column.columnDef.header, header.getContext())}
-								</th>
-							))}
-						</tr>
-					))}
-				</thead>
-				<tbody>
-					{paddedRows.map((row, index) =>
-						row ? (
-							// 실제 데이터 행
-							<tr key={row.id}>
-								{row.getVisibleCells().map((cell) => (
-									<td
-										key={cell.id}
-										style={cell.column.columnDef.cellStyle}
-										className='border-y border-(--p) p-2 text-xs font-semibold'
-									>
-										{flexRender(cell.column.columnDef.cell, cell.getContext())}
-									</td>
-								))}
-							</tr>
-						) : (
-							// 빈 행
-							<tr key={`empty-${index}`}>
-								<td
-									colSpan={columns.length} // 모든 컬럼 합친 너비
-									className='border-y border-(--p) p-2 text-xs'
-								>
-									아직 작성된 글이 없습니다
-								</td>
-							</tr>
-						)
-					)}
-				</tbody>
-			</table>
+		<div className='flex flex-col'>
+			<Mobile table={table} />
+			<DeskTop table={table} />
 
 			<div className='mt-6 flex items-center justify-center space-x-2'>
 				<PageBtn onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>

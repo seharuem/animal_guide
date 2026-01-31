@@ -38,3 +38,11 @@ export const PageBtn = styled.button.attrs({
 		scale: 1 1;
 	}
 `;
+
+export const MLine = styled.div.attrs({
+	className: 'border-b border-(--p) h-12 font-semibold flex items-center'
+})`
+	span {
+		font-size: var(--text-sm);
+	}
+`;

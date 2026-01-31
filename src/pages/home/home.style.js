@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 const base = '/animal_guide';
 
+export const Wrap = styled.div.attrs({
+	className: 'max-w-7xl w-full self-center p-10 flex gap-10 max-lg:gap-6 max-sm:flex-wrap'
+})``;
+
 export const Title3 = styled.h3.attrs({
 	className: 'font-extrabold text-3xl flex items-center gap-2 border-b-2 border-solid pb-2'
 })`
@@ -28,7 +32,7 @@ export const Rank = styled.div.attrs({
 
 export const Menu = styled(Link).attrs({
 	className:
-		'font-extrabold text-xl flex justify-center gap-2 w-40 p-4 bg-(image:--glass) rounded-2xl border-solid border-1 border-white/10 shadow-(--shadow) backdrop-blur-[3px]'
+		'font-extrabold text-xl flex items-center justify-center gap-2 w-40 p-4 bg-(image:--glass) rounded-2xl border-solid border-1 border-white/10 shadow-(--shadow) backdrop-blur-[3px]'
 })`
 	text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 	transition: color 0.1s ease-out;
@@ -59,4 +63,11 @@ export const Menu = styled(Link).attrs({
 		background-color: #e99090;
 		mask-image: url('${base}/link3.svg');
 	}
+`;
+
+export const Tab = styled(Link).attrs({
+	className: 'h-15 flex justify-center items-center font-bold'
+})`
+	flex: 1;
+	padding: 0;
 `;

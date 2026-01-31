@@ -9,19 +9,17 @@ export default function Board() {
 	const { data, loading } = usePosts();
 
 	return ( 
-		<div className='h-full pt-20'>
-			<Wrap className='gap-7'>
-				<TabWrap>
-					<TabBtn className={activeTab === 'notice' ? 'active' : ''} onClick={() => setActiveTab('notice')}>
-						공지사항
-					</TabBtn>
-					<TabBtn className={activeTab === 'free' ? 'active' : ''} onClick={() => setActiveTab('free')}>
-						자유 게시판
-					</TabBtn>
-				</TabWrap>
+		<Wrap className='gap-7'>
+			<TabWrap>
+				<TabBtn className={activeTab === 'notice' ? 'active' : ''} onClick={() => setActiveTab('notice')}>
+					공지사항
+				</TabBtn>
+				<TabBtn className={activeTab === 'free' ? 'active' : ''} onClick={() => setActiveTab('free')}>
+					자유 게시판
+				</TabBtn>
+			</TabWrap>
 
-				{loading ? <div>Loading...</div> : <DataTable data={data} />}
-			</Wrap>
-		</div>
+			{loading ? <div>Loading...</div> : <DataTable data={data} />}
+		</Wrap>
 	);
 }

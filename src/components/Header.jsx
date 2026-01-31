@@ -1,6 +1,8 @@
 import Logo from '../assets/img/logo.png';
 import { NavLink } from 'react-router-dom';
-import { Url, Page } from './style';
+import { Url, Page, Menu } from './style';
+import { Links2 } from '../pages/home/Links';
+import { useState } from 'react';
 
 const links = [
 	{ to: 'villager', label: '주민 명부' },
@@ -9,9 +11,12 @@ const links = [
 ];
 
 export default function Header() {
+	const [menu, setMenu] = useState(false);
+
 	return (
-		<header className='fixed z-10 inset-x-0 h-20 bg-(image:--header) shadow-(--shadowB) flex justify-center backdrop-blur-[2px]'>
-			<div className='w-7xl h-full px-5 flex justify-between'>
+		<header className='z-10 inset-x-0 h-20 sm:bg-(image:--header) sm:shadow-(--shadowB) flex justify-center backdrop-blur-[2px]'>
+			<div className='w-7xl h-full px-5 flex justify-between max-sm:justify-center items-center'>
+				<Menu onClick={() => setMenu(!menu)} />
 				<nav className='w-max flex gap-5 items-center'>
 					<NavLink to='/'>
 						<img className='h-20' src={Logo} alt='' />
@@ -26,10 +31,13 @@ export default function Header() {
 					<Url className='login' to='/login'>
 						로그인
 					</Url>
-					<Url to='/sign'>회원가입</Url>
+					<Url className='sign' to='/sign'>
+						회원가입
+					</Url>
 					{/* <Url to='/'>이름 님</Url>
 					<Url to='/'>로그아웃</Url> */}
 				</nav>
+				{menu && <Links2 />}
 			</div>
 		</header>
 	);
