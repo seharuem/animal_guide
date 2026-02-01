@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 
 const base = '/animal_guide';
 
-export const Wrap = styled.div.attrs({
-	className: 'pt-30 max-w-7xl w-full self-center p-10 flex gap-10 max-lg:gap-6 max-sm:flex-wrap'
-})``;
-
 export const Title3 = styled.h3.attrs({
 	className: 'font-extrabold text-3xl flex items-center gap-2 border-b-2 border-solid pb-2'
 })`

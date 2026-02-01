@@ -1,14 +1,16 @@
 import Result from './Result';
 import BirthDay from './BirthDay';
-import { Links, Links2 } from './Links';
-import { Wrap } from './home.style';
+import { Links } from './Links';
+import { Wrap } from '../../components/style';
 
 export default function Home() {
 	return (
 		<Wrap>
-			<Result />
-			<BirthDay />
-			<Links />
+			<div className='flex gap-6 max-sm:flex-wrap'>
+				<Result />
+				<BirthDay />
+				<Links />
+			</div>
 		</Wrap>
 	);
 }
