@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function usePosts(page = 1, size = 10) {
+export function usePosts(page = 1, size = 20) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
