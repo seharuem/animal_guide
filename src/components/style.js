@@ -61,7 +61,7 @@ export const Page = styled(Url).attrs({
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background-color: var(--p);
+		background-color: var(--bg);
 		scale: 0 1;
 		transition: scale 0.2s ease-out;
 		transform-origin: left;

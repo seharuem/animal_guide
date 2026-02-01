@@ -95,7 +95,7 @@ export const Close = styled.button.attrs({
 	background: var(--c) url(${base}/close.svg) center / 80% no-repeat;
 	translate: 40% -40%;
 	&:hover {
-		background-color: var(--text);
+		background-color: #9A855C;
 	}
 	@media (max-width: 480px) {
 		width: 1.4rem;

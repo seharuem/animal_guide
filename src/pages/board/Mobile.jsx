@@ -2,7 +2,7 @@ import { MLine } from './board.style';
 
 export default function Mobile({ table, pageSize = 15 }) {
 	return (
-		<div className='w-full flex flex-col sm:hidden border-t-2 border-(--text)'>
+		<div className='w-full flex flex-col sm:hidden border-t-2 border-(--c)'>
 			{table.getRowModel().rows.map((row) => (
 				<MLine key={row.id}>
 					<div className='w-full flex flex-col'>
