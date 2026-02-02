@@ -15,11 +15,11 @@ export default function Header() {
 
 	return (
 		<Head>
-			<div className='w-7xl h-full px-5 flex justify-between max-sm:justify-center items-center'>
+			<div className='w-7xl h-full px-5 flex justify-between max-md:justify-center items-center'>
 				<Menu onClick={() => setMenu(!menu)} />
-				<nav className='w-max flex gap-5 items-center'>
-					<NavLink to='/'>
-						<img className='h-20' src={Logo} alt='' />
+				<nav className='w-max h-full flex gap-5 items-center'>
+					<NavLink className='h-full py-4 pr-4' to='/'>
+						<img className='h-full' src={Logo} alt='' />
 					</NavLink>
 					{links.map((link, index) => (
 						<Page key={index} className={({ isActive }) => (isActive ? 'active' : '')} to={link.to}>

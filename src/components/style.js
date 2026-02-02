@@ -17,14 +17,14 @@ export const Head = styled.header.attrs({
 
 export const Menu = styled.button.attrs({
 	type: 'button',
-	className: 'size-10 absolute left-5 z-30 rounded-full shadow-(--shadow) sm:hidden'
+	className: 'size-10 absolute left-5 z-30 rounded-full shadow-(--shadow) md:hidden'
 })`
 	mask: url('${base}/menu.svg') center / 70% no-repeat;
 	background-color: var(--bg);
 `;
 
 export const Url = styled(NavLink).attrs({
-	className: 'font-bold text-lg text-white/80 max-sm:hidden'
+	className: 'font-bold text-lg text-white/80 max-md:hidden'
 })`
 	&.login {
 		display: flex;
@@ -44,7 +44,7 @@ export const Url = styled(NavLink).attrs({
 	&:hover:not(.page) {
 		font-weight: 900;
 	}
-	@media (max-width: 40rem) {
+	@media (max-width: 48rem) {
 		&.login {
 			display: none;
 		}
