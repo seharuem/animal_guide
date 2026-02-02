@@ -28,7 +28,7 @@ export default function Popularity() {
   return (
     <Wrap className="relative">
       <h2 className="font-bold text-2xl">5월의 인기투표</h2>
-      <div className="flex-1 min-h-0 bg-(--c) rounded-2xl relative">
+      <div className="flex-1 min-h-0 bg-(--c2) rounded-2xl relative">
         <SelectWrap>
           {char.map((v, i) => {
             const isChecked = checkId.includes(i);

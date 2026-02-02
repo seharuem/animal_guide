@@ -11,7 +11,7 @@ export default function Sign() {
 	return (
 		<>
 			<h2 className='font-extrabold text-2xl'>회원 가입</h2>
-			<form className='flex flex-col w-80 gap-4'>
+			<form className='flex flex-col w-80 max-sm:w-60 gap-4'>
 				<Field>
 					<input type='text' name='name' placeholder='별명' />
 				</Field>

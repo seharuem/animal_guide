@@ -42,7 +42,7 @@ export default function DataTable({ data }) {
 	});
 
 	return (
-		<div className='flex flex-col'>
+		<div className='flex flex-col flex-1 min-h-0'>
 			<Mobile table={table} />
 			<DeskTop table={table} />
 
