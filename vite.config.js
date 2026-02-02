@@ -4,7 +4,6 @@ import tailwindcss from '@tailwindcss/vite';
 import svgr from 'vite-plugin-svgr';
 import { visualizer } from 'rollup-plugin-visualizer';
 
-// https://vite.dev/config/
 export default defineConfig({
 	plugins: [
 		react(),
@@ -21,5 +20,21 @@ export default defineConfig({
 			plugins: visualizer()
 		}
 	},
-	base: '/animal_guide'
+	base: '/animal_guide',
+
+	// ✅ 추가
+	server: {
+		proxy: {
+			'/api': {
+				target: 'http://localhost:8080',
+				changeOrigin: true,
+				secure: false
+			},
+			'/images': {
+				target: 'http://localhost:8080',
+				changeOrigin: true,
+				secure: false
+			}
+		}
+	}
 });
