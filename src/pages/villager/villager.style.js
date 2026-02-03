@@ -39,7 +39,7 @@ to { opacity: 1 }
 
 export const Card = styled.div.attrs({
 	className:
-		'flex flex-col h-90 aspect-5/3 p-10 max-sm:p-5 rounded-4xl flex-row gap-8 max-sm:gap-5 backdrop-blur-xl font-extrabold opacity-0 max-md:h-auto max-md:w-120 max-md:flex-col max-md:aspect-auto max-sm:w-100'
+		'flex flex-col h-90 p-10 max-sm:p-5 rounded-4xl flex-row gap-8 max-sm:gap-5 backdrop-blur-xl font-extrabold opacity-0 max-md:h-auto max-md:w-120 max-md:flex-col max-sm:w-100'
 })`
 	border: 1px solid var(--c);
 	background-color: #776644;
