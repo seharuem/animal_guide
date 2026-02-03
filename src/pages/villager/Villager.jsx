@@ -70,7 +70,7 @@ export default function Villager() {
             villagers.map((v) => (
               <Mini key={v.villagerNo} onClick={() => select(v.villagerNo)}>
                 <img
-                  src={`/images/icon_images/${v.villagerImageIcon}`}
+                  src={v.villagerImageIcon}
                   alt={v.villagerName}
                 />
                 {v.villagerName}
@@ -104,7 +104,7 @@ export default function Villager() {
                 <Glass className="h-full rounded-4xl max-sm:rounded-3xl p-6 max-sm:p-4 w-max self-center">
                   <img
                     className="h-full object-contain max-md:h-50 max-sm:h-30"
-                    src={`/images/${detail.villagerImage}`}
+                    src={detail.villagerImage}
                     alt={detail.villagerName}
                   />
                 </Glass>
