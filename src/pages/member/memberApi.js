@@ -12,3 +12,9 @@ export const createMember = (member) => {
   // member: { name, id, pw }
   return axios.post(BASE_URL, member);
 };
+
+// 로그인
+export const loginMember = (credentials) => {
+  // credentials = { memberId, memberPw }
+  return axios.post(`${BASE_URL}/login`, credentials);
+};
