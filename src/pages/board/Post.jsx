@@ -1,0 +1,21 @@
+import { Link } from 'react-router-dom';
+import { Wrap } from '../../components/style';
+
+export default function Post() {
+  return (
+    <Wrap>
+      <div className="flex">
+        <Link to="/board">뒤로</Link>
+      </div>
+      <h3 className="bg-white/20 rounded-sm py-2 px-4 text-left">제목</h3>
+      <div className="flex justify-between border-b pb-2 px-4">
+        <span>작성자</span>
+        <span>시간</span>
+      </div>
+
+      <div className="bg-white/20 rounded-2xl min-h-0 flex-1 p-4 text-left">
+        내용
+      </div>
+    </Wrap>
+  );
+}
