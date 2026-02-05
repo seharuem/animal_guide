@@ -1,5 +1,5 @@
-import { Card, CardWrap, Close, List, Mini, Wrap2 } from './villager.style';
-import { Glass } from '../../components/style';
+import { Card, CardWrap, Close, List, Mini } from './villager.style';
+import { Glass, Wrap2 } from '../../components/style';
 import { useState } from 'react';
 import { useVillagers, useVillagerDetail } from './useVillagers';
 

@@ -3,16 +3,6 @@ import { Glass, Scroll, Wrap } from '../../components/style';
 
 const base = '/animal_guide';
 
-export const Wrap2 = styled(Wrap)`
-  scrollbar-gutter: stable;
-  padding-right: 0.5rem;
-  padding-top: 1.5rem;
-  @media (max-width: 480px) {
-    padding-inline: 1rem;
-    padding-bottom: 1rem;
-  }
-`;
-
 export const CardWrap = styled(Scroll).attrs({
   className: 'w-full grid gap-2'
 })`

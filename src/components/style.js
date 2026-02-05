@@ -112,6 +112,16 @@ export const Wrap = styled.div.attrs({
 		'max-w-7xl w-full min-h-0 flex-1 self-center p-6 pt-26 max-sm:p-4 max-sm:pt-26 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5 overflow-hidden'
 })``;
 
+export const Wrap2 = styled(Wrap)`
+	scrollbar-gutter: stable;
+	padding-right: 0.5rem;
+	padding-top: 1.5rem;
+	@media (max-width: 480px) {
+		padding-inline: 1rem;
+		padding-bottom: 1rem;
+	}
+`;
+
 export const Login = styled.div.attrs({
 	className: 'h-full flex flex-col items-center gap-20 pt-20'
 })`
