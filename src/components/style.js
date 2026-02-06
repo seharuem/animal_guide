@@ -104,12 +104,12 @@ export const Scroll = styled.div.attrs({
 `;
 
 export const Box = styled.div.attrs({
-	className: 'rounded-3xl p-5 flex flex-col gap-4 bg-(image:--glass) backdrop-blur-[3px]'
+	className: 'rounded-3xl p-5 h-max flex flex-col gap-4 bg-(image:--glass) backdrop-blur-[3px]'
 })``;
 
 export const Wrap = styled.div.attrs({
 	className:
-		'max-w-7xl w-full min-h-0 flex-1 self-center p-6 pt-26 max-sm:p-4 max-sm:pt-26 bg-white/15 backdrop-blur-[3px] flex flex-col gap-5 overflow-hidden'
+		'max-w-7xl w-full h-max min-h-full px-6 pt-26 pb-6 max-sm:px-4 max-sm:pt-26 bg-white/15 flex flex-col gap-5'
 })``;
 
 export const Wrap2 = styled(Wrap)`

@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { Glass, Scroll, Wrap } from '../../components/style';
+import { Glass, Scroll } from '../../components/style';
 
 const base = '/animal_guide';
 
