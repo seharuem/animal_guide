@@ -7,8 +7,8 @@ import './assets/fonts/font.css';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<HashRouter>
+		<BrowserRouter basename='/animal_guide'>
 			<App />
-		</HashRouter>
+		</BrowserRouter>
 	</StrictMode>
 );

@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import Logo from './assets/img/logo.png';
 import { Box } from './components/style';
 import { Login } from './components/login.style';
+import ScrollTop from './components/ScrollTop';
 
 export function L() {
 	return (
 		<>
+			<ScrollTop />
 			<Header />
 			<Outlet />
 		</>
