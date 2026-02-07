@@ -6,22 +6,12 @@
 	font-family: 'Nexon Lv2 Gothic', sans-serif;
 }
 
-#root::-webkit-scrollbar {
-	width: 1.4rem;
-	background-color: transparent;
-	border-radius: 20px;
+::-webkit-scrollbar {
+	width: 0.2rem;
+	background-color: var(--c2);
 }
-#root::-webkit-scrollbar-thumb {
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 2rem;
-	border: 0.6rem solid transparent;
-	background-clip: padding-box;
-}
-
-@media (max-width: 480px) {
-	#root::-webkit-scrollbar {
-		display: none;
-	}
+::-webkit-scrollbar-thumb {
+	background-color: var(--c);
 }
 
 :root {
