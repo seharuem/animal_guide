@@ -17,7 +17,8 @@ export default function Popularity() {
 
 	return (
 		<Wrap className='h-0! fixed max-sm:inset-0'>
-			<h2 className='font-bold text-2xl'>5월의 인기투표</h2>
+			<h2 className='font-bold text-2xl self-start'>5월의 주민 인기 투표</h2>
+			<span className='self-start'>투표 기간: 4월 1일 ~ 4월 30일</span>
 			<div className='flex-1 min-h-0 bg-(--c2) rounded-2xl relative'>
 				<SelectWrap>
 					{char.map((v, i) => {

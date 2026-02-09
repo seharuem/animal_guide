@@ -64,5 +64,5 @@ export const Action = styled.button.attrs({
 
 export const ResultBox = styled(SelectBox).attrs({
 	as: 'div',
-	className: 'h-50 aspect-3/4 cursor-default!'
+	className: 'h-50 max-sm:h-35 aspect-3/4 cursor-default!'
 })``;

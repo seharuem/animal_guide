@@ -39,7 +39,7 @@ export default function MyPick() {
 			<div className='flex gap-4'>
 				{data.map((v, i) => (
 					<ResultBox key={i}>
-						<img src={v.img} className='min-h-0 flex-1 object-contain' />
+						<img src={v.img} className='min-h-0 flex-1 object-contain' alt='' />
 						{v.name}
 					</ResultBox>
 				))}
