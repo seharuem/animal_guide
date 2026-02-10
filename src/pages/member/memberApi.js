@@ -16,7 +16,9 @@ export const createMember = (member) => {
 };
 
 // 로그인
-export const loginMember = (credentials) => {
-  // credentials = { memberId, memberPw }
-  return axios.post(`${BASE_URL}/login`, credentials);
+export const loginMember = (data) => {
+  return axios.post(
+    `${API_URL}/api/members/login`,
+    data
+  );
 };

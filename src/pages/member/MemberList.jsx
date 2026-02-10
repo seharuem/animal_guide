@@ -20,8 +20,8 @@ function MemberList() {
       <h2>회원 목록</h2>
       <ul>
         {members.map((member) => (
-          <li key={member.member_no}>
-            {member.member_id} / {member.member_name} / {member.member_email}
+          <li key={member.memberNo}>
+            {member.memberId} / {member.memberPw} / {member.memberName} / {member.memberEmail}
           </li>
         ))}
       </ul>
