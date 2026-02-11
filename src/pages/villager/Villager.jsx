@@ -1,5 +1,5 @@
 import { Card, CardWrap, Close, List, Mini } from './villager.style';
-import { Glass, Wrap2 } from '../../components/style';
+import { Glass, Wrap } from '../../components/style';
 import { useState } from 'react';
 import { useVillagersSearch, useVillagerDetail } from './useVillagers';
 
@@ -53,7 +53,7 @@ export default function Villager() {
 
   return (
   <>
-    <Wrap2 className="relative overflow-visible pt-20">
+    <Wrap className="relative overflow-visible pt-20">
       {/* ✅ 2컬럼 레이아웃: 왼쪽 목록 / 오른쪽 필터 */}
       <div className="w-full max-w-6xl mx-auto px-4 max-sm:px-2 py-6">
         <div className="flex gap-6 items-start">
@@ -151,7 +151,7 @@ export default function Villager() {
         {/* ✅ 모바일: 필터는 위로 다시 보여주고 싶으면 여기서 따로 렌더링 */}
         {/* max-md:block / md:hidden 같은 방식으로 */}
       </div>
-    </Wrap2>
+    </Wrap>
 
     {/* ✅ 상세 모달은 그대로 */}
     {isSelect && (
