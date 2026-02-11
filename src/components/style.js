@@ -112,16 +112,6 @@ export const Wrap = styled.div.attrs({
 		'max-w-7xl w-full h-max min-h-full px-6 pt-26 pb-6 max-sm:px-4 max-sm:pt-26 bg-white/15 flex flex-col gap-5'
 })``;
 
-export const Wrap2 = styled(Wrap)`
-	scrollbar-gutter: stable;
-	padding-right: 0.5rem;
-	padding-top: 1.5rem;
-	@media (max-width: 480px) {
-		padding-inline: 1rem;
-		padding-bottom: 1rem;
-	}
-`;
-
 export const Btn = styled.button.attrs({
 	className: 'text-white bg-(--c) rounded-lg px-3 py-1 font-bold hover:bg-(--c2)'
 })``;
