@@ -1,27 +1,9 @@
 import { Card, CardWrap, Close, List, Mini } from './villager.style';
 import { Glass, Wrap } from '../../components/style';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useVillagersSearch, useVillagerDetail } from './useVillagers';
-
-const formatBirthday = (birthString) => {
-	if (!birthString) return '';
-	const [month, day] = birthString.split('-');
-	return `${Number(month)}월 ${Number(day)}일`;
-};
-
-const getGenderLabel = (sex) => (sex === 1 ? '남자' : '여자');
-
-const getName = (data) => {
-	return `${data.villagerName} | ${data.villagerNameEn} | ${data.villagerNameJp}`;
-};
-
-const getDetailData = (detail) => [
-	{ label: '이름', value: getName(detail) },
-	{ label: '성별', value: getGenderLabel(detail.villagerSex) },
-	{ label: '종족', value: detail.villagerTypeName },
-	{ label: '생일', value: formatBirthday(detail.villagerBirth) },
-	{ label: '데뷔', value: detail.villagerDebut }
-];
+import { getDetailData } from './villager.config';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock-upgrade';
 
 export default function Villager() {
 	const [type, setType] = useState('');
@@ -81,16 +63,22 @@ export default function Villager() {
 		setSelectedNo(null);
 	};
 
+	const dialogRef = useRef(null);
+
 	useEffect(() => {
+		const dialog = dialogRef.current;
+
 		if (isSelect) {
-			document.documentElement.style.overflow = 'hidden';
+			dialog.showModal();
+			disableBodyScroll(dialog, {
+				reserveScrollBarGap: true
+			});
 		} else {
-			document.documentElement.style.overflow = '';
+			dialog.close();
+			enableBodyScroll(dialog);
 		}
 
-		return () => {
-			document.documentElement.style.overflow = '';
-		};
+		return () => enableBodyScroll(dialog);
 	}, [isSelect]);
 
 	return (
@@ -130,7 +118,7 @@ export default function Villager() {
 						</button>
 					</div>
 				</aside>
-				{/* ✅ 왼쪽: 목록 영역 */}
+
 				<CardWrap>
 					{listLoading && <div className='w-full text-center py-10 opacity-70'>불러오는 중...</div>}
 
@@ -152,7 +140,7 @@ export default function Villager() {
 			</Wrap>
 
 			{/* 상세정보 모달 */}
-			{isSelect && (
+			<dialog ref={dialogRef} onClose={closeModal}>
 				<div
 					className='fixed inset-0 bg-black/30 flex flex-col gap-8 max-sm:gap-5 items-center justify-center max-sm:pt-20'
 					onClick={closeModal}
@@ -186,7 +174,7 @@ export default function Villager() {
 
 					<Close onClick={closeModal}>닫기</Close>
 				</div>
-			)}
+			</dialog>
 		</>
 	);
 }

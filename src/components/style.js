@@ -9,7 +9,7 @@ const move = keyframes`
 `;
 
 export const Head = styled.header.attrs({
-	className: 'z-50 fixed inset-x-0 h-20 flex justify-center pb-1'
+	className: 'z-50 fixed w-full h-20 flex justify-center pb-1'
 })`
 	filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
 	background: url('${base}/header.svg') bottom / contain repeat-x;

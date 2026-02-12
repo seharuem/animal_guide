@@ -30,7 +30,7 @@ to { opacity: 1 }
 
 export const Card = styled.div.attrs({
 	className:
-		'flex flex-col h-90 p-10 max-sm:p-5 rounded-4xl flex-row gap-8 max-sm:gap-5 backdrop-blur-xl font-bold opacity-0 max-md:h-auto max-md:w-120 max-md:flex-col max-sm:w-100'
+		'flex flex-col h-90 p-10 max-sm:p-5 rounded-4xl flex-row gap-8 max-sm:gap-5 backdrop-blur-xl font-bold opacity-0 max-md:h-auto max-md:w-120 max-md:flex-col max-sm:w-100 font-(family-name:--f)'
 })`
 	border: 1px solid var(--c);
 	background-color: #776644;
@@ -62,7 +62,7 @@ export const List = styled(Glass).attrs({
 export const Close = styled(Glass).attrs({
 	as: 'button',
 	type: 'button',
-	className: 'rounded-full px-4 py-2 backdrop-blur-3xl text-sm font-bold opacity-0'
+	className: 'rounded-full px-4 py-2 backdrop-blur-3xl text-sm font-bold opacity-0 outline-none'
 })`
 	box-shadow: 0 0 4px var(--c);
 	transition: background-color 0.1s ease-out;
