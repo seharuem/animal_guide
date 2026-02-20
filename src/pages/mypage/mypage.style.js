@@ -15,9 +15,10 @@ export const Fold = styled.button.attrs({
 		background: url(${base}/fold.svg) center / contain no-repeat;
 		translate: -1rem;
 		transition: scale 0.2s ease-out;
+		scale: 1 -1;
 	}
 	&.fold::after {
-		scale: 1 -1;
+		scale: 1 1;
 	}
 `;
 
@@ -52,10 +53,10 @@ export const Action = styled.button.attrs({
 })`
 	background: url(${base}/fold.svg) center / contain no-repeat;
 	&.prev {
-		rotate: -90deg;
+		rotate: 90deg;
 	}
 	&.next {
-		rotate: 90deg;
+		rotate: -90deg;
 	}
 	&:disabled {
 		opacity: 0.3;

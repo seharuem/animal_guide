@@ -44,7 +44,8 @@ export const Card = styled.div.attrs({
 `;
 
 export const Load = styled.div.attrs({
-	className: 'absolute w-28 top-[50%] aspect-square -translate-y-1/2 rounded-full animate-spin opacity-30'
+	className:
+		'absolute w-24 top-[50%] aspect-square -translate-y-1/2 rounded-full animate-spin opacity-30 max-md:w-20 max-sm:w-16'
 })`
 	background: url(${base}/load.svg) center / contain no-repeat;
 `;
@@ -76,4 +77,28 @@ export const Close = styled(Glass).attrs({
 		background-color: rgba(255, 255, 255, 0.8);
 	}
 	animation: ${fade} 0.2s ease-out forwards;
+`;
+
+export const Nav = styled(Glass).attrs({
+	as: 'nav',
+	className:
+		'sticky top-26 flex items-center justify-between gap-2 py-2 px-4 rounded-full z-10 backdrop-blur-3xl bg-white/60'
+})``;
+
+export const Select = styled.select.attrs({
+	className: 'appearance-none cursor-pointer border-b pr-5'
+})`
+	background: url(${base}/fold.svg) right / 0.6rem no-repeat;
+`;
+
+export const Search = styled.input.attrs({
+	type: 'search',
+	className: 'outline-none text-(--c) font-bold w-60'
+})``;
+
+export const Filter = styled.button.attrs({
+	type: 'button',
+	className: 'w-6 aspect-square bg-(--c) sm:hidden'
+})`
+	mask: url(${base}/filter.svg) center / contain no-repeat;
 `;

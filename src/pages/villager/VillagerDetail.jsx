@@ -31,7 +31,7 @@ export default function VillagerDetail({ selectedNo, isOpen, onClose }) {
 					{error && <div className='p-10 text-center text-red-500'>에러 발생</div>}
 					{!loading && detail && (
 						<>
-							<Glass className='h-full aspect-2/3 p-6 flex justify-center relative'>
+							<Glass className='h-full aspect-2/3 p-6 flex justify-center relative max-md:h-50 self-center'>
 								{!imgLoad && <Load />}
 								<img
 									className={`object-contain ${imgLoad ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}

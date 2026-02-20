@@ -1,12 +1,13 @@
+import { Filter, Nav, Search, Select } from './villager.style';
+
 export default function VillagerFilter({ filterConfigs, onReset, onChange }) {
 	return (
-		<aside className='sticky top-26 flex items-center gap-5 px-4 py-2 bg-(--c) text-white/80 rounded-2xl z-10'>
-			<div className='text-lg font-semibold max-sm:hidden'>필터</div>
-			<div className='flex gap-3 font-bold'>
+		<Nav>
+			<Search name='search' placeholder='주민 이름을 검색하세요' />
+			<div className='flex gap-3 font-bold ml-auto max-sm:hidden'>
 				{filterConfigs.map((f) => (
-					<select
+					<Select
 						key={f.key}
-						className='cursor-pointer bg-transparent outline-none'
 						value={f.value}
 						onChange={(e) => {
 							f.setState(e.target.value);
@@ -14,16 +15,17 @@ export default function VillagerFilter({ filterConfigs, onReset, onChange }) {
 						}}
 					>
 						{f.options.map((opt) => (
-							<option key={opt.value} value={opt.value} className='text-black'>
+							<option key={opt.value} value={opt.value}>
 								{opt.label}
 							</option>
 						))}
-					</select>
+					</Select>
 				))}
-				<button type='button' onClick={onReset} className='hover:text-white transition-colors'>
+				<button type='button' onClick={onReset}>
 					초기화
 				</button>
 			</div>
-		</aside>
+			<Filter />
+		</Nav>
 	);
 }
