@@ -30,12 +30,8 @@ to { opacity: 1 }
 
 export const Card = styled.div.attrs({
 	className:
-		'flex flex-col h-90 p-10 max-sm:p-6 rounded-4xl flex-row gap-8 max-sm:gap-5 backdrop-blur-xl font-bold opacity-0 max-md:h-auto max-md:w-120 max-md:flex-col max-sm:w-100 font-(family-name:--f)'
+		'flex flex-col h-90 p-10 max-sm:p-6 rounded-4xl flex-row gap-8 max-sm:gap-5 backdrop-blur-xl font-bold opacity-0 max-md:h-auto max-md:w-120 max-md:flex-col max-sm:w-100 font-(family-name:--f) bg-(--c)/60 shadow-(--shadow) text-white/80'
 })`
-	border: 1px solid var(--c);
-	background-color: #776644;
-	color: rgba(255, 255, 255, 0.8);
-	box-shadow: 0 0 4px var(--c);
 	animation: ${fade} 0.2s ease-out forwards;
 	@media (max-width: 480px) {
 		width: 20rem;
@@ -65,17 +61,11 @@ export const List = styled.div.attrs({
 	}
 `;
 
-export const Close = styled(Glass).attrs({
-	as: 'button',
+export const Close = styled.button.attrs({
 	type: 'button',
-	className: 'rounded-full px-4 py-2 backdrop-blur-3xl text-sm font-bold opacity-0 outline-none'
+	className: 'text-sm font-bold opacity-0 outline-none text-white text-shadow-(--shadow)'
 })`
-	box-shadow: 0 0 4px var(--c);
 	transition: background-color 0.1s ease-out;
-	background-color: rgba(255, 255, 255, 0.5);
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.8);
-	}
 	animation: ${fade} 0.2s ease-out forwards;
 `;
 
