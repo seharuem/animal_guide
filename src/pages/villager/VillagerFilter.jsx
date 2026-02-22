@@ -24,7 +24,7 @@ export default function VillagerFilter({ filterConfigs, onReset, onChange }) {
 						))}
 					</Select>
 				))}
-				<button type='button' onClick={onReset} className='text-sm self-center'>
+				<button type='button' onClick={onReset} className='text-sm self-center text-white'>
 					초기화
 				</button>
 			</SelectWrap>

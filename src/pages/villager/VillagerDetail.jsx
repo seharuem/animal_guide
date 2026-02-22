@@ -40,9 +40,9 @@ export default function VillagerDetail({ selectedNo, isOpen, onClose }) {
 									alt=''
 								/>
 							</Glass>
-							<ul className='flex flex-col justify-between max-md:gap-5'>
+							<ul className='flex flex-col justify-between max-md:gap-4'>
 								{getDetailData(detail).map((item, i) => (
-									<li key={i} className='flex gap-5 items-center text-xl'>
+									<li key={i} className='flex gap-5 items-center text-lg max-sm:text-base max-sm:gap-4 border-b-2 border-white/40 pb-1'>
 										<List>{item.label}</List>
 										{item.value}
 									</li>
