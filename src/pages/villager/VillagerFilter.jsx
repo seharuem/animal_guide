@@ -1,10 +1,13 @@
-import { Filter, Nav, Search, Select } from './villager.style';
+import { useState } from 'react';
+import { Filter, Nav, Search, Select, SelectWrap } from './villager.style';
 
 export default function VillagerFilter({ filterConfigs, onReset, onChange }) {
+	const [isFilter, setIsFilter] = useState(false);
+
 	return (
 		<Nav>
 			<Search name='search' placeholder='주민 이름을 검색하세요' />
-			<div className='flex gap-3 font-bold ml-auto max-sm:hidden'>
+			<SelectWrap className={isFilter ? '' : 'max-sm:hidden'}>
 				{filterConfigs.map((f) => (
 					<Select
 						key={f.key}
@@ -21,11 +24,11 @@ export default function VillagerFilter({ filterConfigs, onReset, onChange }) {
 						))}
 					</Select>
 				))}
-				<button type='button' onClick={onReset}>
+				<button type='button' onClick={onReset} className='text-sm self-center'>
 					초기화
 				</button>
-			</div>
-			<Filter />
+			</SelectWrap>
+			<Filter onClick={() => setIsFilter(!isFilter)} />
 		</Nav>
 	);
 }

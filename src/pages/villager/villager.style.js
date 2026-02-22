@@ -85,6 +85,11 @@ export const Nav = styled(Glass).attrs({
 		'sticky top-26 flex items-center justify-between gap-2 py-2 px-4 rounded-full z-10 backdrop-blur-3xl bg-white/60'
 })``;
 
+export const SelectWrap = styled.div.attrs({
+	className:
+		'flex gap-3 font-bold ml-auto max-sm:absolute top-full right-0 max-sm:bg-white/95 max-sm:px-3 max-sm:py-2 max-sm:rounded-lg max-sm:translate-y-2 max-sm:shadow-(--shadow) max-sm:flex-col max-sm:gap-4'
+})``;
+
 export const Select = styled.select.attrs({
 	className: 'appearance-none cursor-pointer border-b pr-5'
 })`
